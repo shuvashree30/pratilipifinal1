@@ -22,7 +22,7 @@ urlpatterns = [
     path('',views.index,name='index'),
    path('special/',views.special,name='special'),
    path('dappx/',include('dappx.urls')),
-   path('logout/', views.user_logout, name='logout'),
+   path('shuvashree/', views.user_logout, name='logout'),
 
 
 ]

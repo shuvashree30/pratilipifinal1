@@ -5,6 +5,11 @@
     <h1>Welcome to Pratilipi !</h1>
     {% if user.is_authenticated %}
         <h2>Hello {{ user.username}}</h2>
+         <div class="alert alert-success" role="alert">
+
+                <h3>TOTAL VISITORS :{{count}}
+                </h3>
+            </div>
         <h3>Choose a Story<h3>
         <h3><a href="pigs.html">The three little Pigs</a></h3><img src="static/three-little-pigs-sm.jpg" alt="rabbit" width="300" height="300">
         <h3><a href="velvet.html">The Velveteen Rabbit</a></h3><img src="static/childrens-stories-velveteen-rabbit.jpeg" alt="rabbit" width="300" height="300">

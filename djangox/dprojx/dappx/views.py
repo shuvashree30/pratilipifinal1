@@ -63,14 +63,15 @@ def get_ip(request):
         ip=adress.split(',')[-1].strip()
     else:
         ip=request.META.get('REMOTE_ADDR')
-    return ip
+
+
     ip=get_ip(request)
     u=User(user=ip)
     print(ip)
-    result=User.objects.filter(Q(user__iconstains=ip))
+    result=User.objects.filter(Q(user__icontains=ip))
 
     if len(result)==1:
-     print("user exists")
+      print("user exists")
 
     elif len(result)>1:
      print("user exists more.....")
@@ -78,5 +79,7 @@ def get_ip(request):
     else:
      u.save()
      print("user is unique")
-    count=User.object,all().count()
+    count=User.object.all().count()
     print("total user is ", count)
+    
+    return render(request,'index.html',{'count':count})
