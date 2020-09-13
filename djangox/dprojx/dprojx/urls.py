@@ -24,4 +24,5 @@ urlpatterns = [
    path('dappx/',include('dappx.urls')),
    path('logout/', views.user_logout, name='logout'),
 
+
 ]

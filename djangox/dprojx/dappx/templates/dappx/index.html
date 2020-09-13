@@ -4,9 +4,14 @@
   <div class="jumbotron">
     <h1>Welcome to Pratilipi !</h1>
     {% if user.is_authenticated %}
-        <h2>Hello {{ user.username }}</h2>
+        <h2>Hello {{ user.username}}</h2>
+        <h3>Choose a Story<h3>
+        <h3><a href="pigs.html">The three little Pigs</a></h3><img src="static/three-little-pigs-sm.jpg" alt="rabbit" width="300" height="300">
+        <h3><a href="velvet.html">The Velveteen Rabbit</a></h3><img src="static/childrens-stories-velveteen-rabbit.jpeg" alt="rabbit" width="300" height="300">
+        <h3><a href="jack.html">Jack and the Beenstalk</a></h3><img src="static/jack-and-the-beanstalk-sm.jpg" alt="rabbit" width="300" height="300">
+
     {% else %}
-        <h2>Register or Login for some amazing stories</h2
+        <h2>Register or Login for some amazing stories</h2>
     {% endif %}
   </div>
 </div>
